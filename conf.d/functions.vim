@@ -36,7 +36,7 @@ function! MinpacInit()
   " Load minpac AFTER it exists
   packadd minpac
   call minpac#init()
-  
+
 endfunction
 
 function! RunOnce()
@@ -49,9 +49,9 @@ function! RunOnce()
 
     " Plugin init
     call MinpacInit()
-    if empty(glob('~/.vim/pack/minpac/start/*'))
-      autocmd VimEnter * call minpac#update()
-    endif
+    "if empty(glob('~/.vim/pack/minpac/start/*'))
+    "  autocmd VimEnter * call minpac#update()
+    "endif
   endtry
 endfunction
 

@@ -37,4 +37,9 @@ call minpac#add('mhinz/vim-startify')
 call minpac#add('skanehira/docker-compose.vim')
 call minpac#add('mattn/emmet-vim')
 
+" Auto-install plugins on first run
+if empty(glob('~/.vim/pack/minpac/start/*'))
+  call minpac#update()
+endif
+
 " vi: ft=vim

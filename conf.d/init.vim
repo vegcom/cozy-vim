@@ -22,7 +22,7 @@ if has('win32')
 else
   " Unix uses bash
   set shell=bash
-  set shellcmdflag=-v
+  set shellcmdflag=-c
 endif
 
 " disable built in explorer
