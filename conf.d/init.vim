@@ -11,7 +11,7 @@ endif
 
 " compat hooks
 if has('win32')
-  " NT uses pwsh
+  " NT uses cmd
   set shell=cmd.exe
   set shellcmdflag=/c
   set shellpipe=|

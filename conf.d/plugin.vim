@@ -21,8 +21,8 @@ call minpac#add('heavenshell/vim-pydocstring', {'do': 'make install'})
 call minpac#add('tpope/vim-surround')
 call minpac#add('scrooloose/nerdcommenter')
 call minpac#add('scrooloose/nerdtree')
-call minpac#add('majutsushi/tagbar')
-call minpac#add('pseewald/nerdtree-tagbar-combined')
+"call minpac#add('majutsushi/tagbar')
+"call minpac#add('pseewald/nerdtree-tagbar-combined')
 call minpac#add('universal-ctags/ctags')
 
 " Misc
