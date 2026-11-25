@@ -12,11 +12,10 @@ endif
 " compat hooks
 if has('win32')
   " NT uses pwsh
-  set shell=pwsh
-  set shellcmdflag=-NoLogo\ -NoProfile\ -Command
-  set shellquote=\"
-  set shellxquote=
-  set shellredir=>%s\ 2>&1
+  set shell=cmd.exe
+  set shellcmdflag=/c
+  set shellpipe=|
+  set shellredir=>
   " force pwsh for plugins
   let g:plug_powershell = 1
 else

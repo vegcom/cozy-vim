@@ -45,10 +45,13 @@ set fileformat=unix
 set termencoding=utf-8
 set encoding=utf-8
 set mouse=a
-set nobackup
-set noswapfile
+set backup
+set writebackup
 set undofile
-set undodir=~/.vim/tmp/undo/
+set swapfile
+set undodir=~/.vim/tmp/undo//
+set backupdir=~/.vim/tmp/backup//
+set directory=~/.vim/tmp/swap//
 set cursorline
 set cursorcolumn
 set incsearch
@@ -61,6 +64,19 @@ set lazyredraw
 set listchars=eol:¬,tab:»·,nbsp:+,trail:·,extends:…,precedes:…
 set statusline=\ %f\ %y\ %m%=%l,%c\ \ \ \ \ \ \ \ \ \ \ \ %P\ |
 set backspace=indent,eol,start
+
+" Ensure directories exist (Vim 8+)
+if !isdirectory(expand("~/.vim/tmp/undo"))
+    call mkdir(expand("~/.vim/tmp/undo"), "p")
+endif
+
+if !isdirectory(expand("~/.vim/tmp/backup"))
+    call mkdir(expand("~/.vim/tmp/backup"), "p")
+endif
+
+if !isdirectory(expand("~/.vim/tmp/swap"))
+    call mkdir(expand("~/.vim/tmp/swap"), "p")
+endif
 
 nmap <silent> ,/ :nohlsearch<CR>
 

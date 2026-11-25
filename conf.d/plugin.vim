@@ -2,6 +2,7 @@
 call minpac#init()
 
 " Core plugins
+call minpac#add('k-takata/minpac', {'type': 'opt'})
 call minpac#add('vim-airline/vim-airline')
 call minpac#add('dracula/vim', {'name': 'dracula'})
 call minpac#add('kien/ctrlp.vim')
@@ -12,7 +13,7 @@ call minpac#add('junegunn/vim-easy-align')
 
 " Plugins with build steps
 call minpac#add('Shougo/vimproc.vim', {'do': 'make'})
-call minpac#add('ycm-core/YouCompleteMe', {'do': './install.py'})
+"call minpac#add('ycm-core/YouCompleteMe', {'do': './install.py'})
 call minpac#add('vim-syntastic/syntastic')
 call minpac#add('heavenshell/vim-pydocstring', {'do': 'make install'})
 

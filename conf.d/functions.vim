@@ -25,6 +25,7 @@ function! MinpacInit()
     call system('git clone --recursive https://github.com/k-takata/minpac ' . shellescape(minpac_dir))
 
     " Re-source vimrc on next startup
+    echo "Bootstrapping minpac..."
     augroup MinpacBootstrap
       autocmd!
       autocmd VimEnter * source $MYVIMRC
@@ -34,6 +35,7 @@ function! MinpacInit()
   endif
 
   " Load minpac AFTER it exists
+  echo "Packadd minpac..."
   packadd minpac
   call minpac#init()
 
